@@ -1,0 +1,241 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8fafc; /* Background cerah */
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation - Center Aligned dengan tema warna gambar ketiga */
+nav {
+  background-color: #0b0d13;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center; /* Posisi di tengah */
+  gap: 2rem;
+  border-bottom: 1px solid #282d3f;
+}
+
+nav a {
+  color: #8b949e;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+  color: #e5a035; /* Aksen Amber Gold */
+  border-bottom: 2px solid #e5a035;
+}
+
+/* Header - Menggunakan tema warna gelap & aksen emas dari gambar ketiga */
+header {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background-color: #131620;
+  color: #ffffff;
+  border-bottom: 1px solid #282d3f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+header .eyebrow {
+  color: #e5a035;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Controls (Search & Filter) */
+.controls {
+  max-width: 1100px;
+  margin: 2rem auto 1rem;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.controls input, .controls select {
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #1e293b;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.controls input {
+  flex: 1;
+}
+
+.controls input:focus, .controls select:focus {
+  border-color: #e5a035;
+  box-shadow: 0 0 0 3px rgba(229, 160, 53, 0.15);
+}
+
+/* Main Content & Status */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  flex: 1;
+  width: 100%;
+}
+
+#status {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+#status.error {
+  color: #ef4444;
+}
+
+/* Product Grid & Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  background-color: #f1f5f9;
+}
+
+.thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #10b981;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.stock-badge.low {
+  background-color: #ef4444;
+}
+
+.body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.category {
+  color: #d97706;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.body h3 {
+  font-size: 1.05rem;
+  color: #1e293b;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.footer-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.8rem;
+}
+
+.price-tag {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+}
+
+.discount {
+  font-size: 0.7rem;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.rating {
+  font-size: 0.85rem;
+  color: #d97706;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background-color: #0b0d13;
+  text-align: center;
+  padding: 1.2rem;
+  color: #8b949e;
+  font-size: 0.85rem;
+  border-top: 1px solid #282d3f;
+}
